@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://expoart-2026-sena-atlantico.netlify.app/sitemap.xml
