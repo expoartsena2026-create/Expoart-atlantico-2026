@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ExpoArt 2026 · Sueños de Innovación — SENA Regional Atlántico</title>
+<meta name="description" content="ExpoArt 2026, Sueños de Innovación. 28 y 29 de octubre en Combarranquilla, Sede Boston. Evento de innovación, tecnología y emprendimiento del SENA Regional Atlántico.">
+<link rel="icon" href="WhatsApp_Image_2026-09-11_at_10_34_45_PM.jpeg">
+<link rel="apple-touch-icon" href="WhatsApp_Image_2026-09-11_at_10_34_45_PM.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0F1B2D;
+    --navy-soft:#16243B;
+    --green:#2FA84F;
+    --purple:#6E2E8E;
+    --gold:#F4B400;
+    --cream:#F6F3EC;
+    --ink:#12131A;
+    --muted:#93A0B4;
+    --line: rgba(246,243,236,0.14);
+    --max: 1160px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Space Grotesk',sans-serif;
+    line-height:1.08;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+  .diamond{
+    width:11px;height:11px;flex:none;
+    transform:rotate(45deg);
+    border-radius:2px;
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+
+  /* ---------- Nav ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(15,27,45,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    max-width:var(--max);margin:0 auto;padding:14px 24px;
+    display:flex;align-items:center;justify-content:space-between;
+    color:var(--cream);
+  }
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.05rem;}
+  .brand img{width:34px;height:34px;border-radius:8px;object-fit:cover;background:#fff;}
+  .nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:0.94rem;}
+  .nav-links a{text-decoration:none;color:var(--cream);opacity:0.82;transition:opacity .2s;}
+  .nav-links a:hover{opacity:1;}
+  .nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;color:var(--cream);width:40px;height:40px;font-size:1.1rem;}
+  @media (max-width:760px){
+    .nav-links{
+      position:absolute;top:100%;left:0;right:0;
+      flex-direction:column;gap:0;
+      background:var(--navy);
+      border-bottom:1px solid var(--line);
+      max-height:0;overflow:hidden;
+      transition:max-height .3s ease;
+    }
+    .nav-links.open{max-height:320px;}
+    .nav-links li{border-top:1px solid var(--line);}
+    .nav-links a{display:block;padding:14px 24px;}
+    .nav-toggle{display:block;}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:
+      radial-gradient(ellipse at 85% 12%, rgba(244,180,0,0.16), transparent 45%),
+      radial-gradient(ellipse at 8% 90%, rgba(110,46,142,0.28), transparent 50%),
+      var(--navy);
+    color:var(--cream);
+    padding:64px 0 84px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1.15fr 0.85fr;gap:48px;align-items:center;
+  }
+  .pill{
+    display:inline-flex;align-items:center;gap:8px;
+    border:1px solid var(--line);border-radius:99px;
+    padding:6px 14px;font-size:0.84rem;color:var(--cream);opacity:0.9;
+    margin-bottom:22px;
+  }
+  .hero h1{font-size:clamp(2.6rem,6vw,4.2rem);font-weight:700;color:var(--cream);}
+  .hero .accent{color:var(--gold);}
+  .hero p.lede{margin-top:18px;max-width:46ch;color:var(--muted);font-size:1.08rem;}
+  .info-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
+  .info-chips span{
+    display:flex;align-items:center;gap:8px;
+    background:var(--navy-soft);border:1px solid var(--line);
+    padding:9px 14px;border-radius:10px;font-size:0.88rem;color:var(--cream);
+  }
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:13px 22px;border-radius:10px;font-weight:600;font-size:0.95rem;
+    text-decoration:none;border:1px solid transparent;transition:transform .15s ease, opacity .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--green);color:#08150C;}
+  .btn-ghost{border-color:var(--line);color:var(--cream);}
+
+  /* countdown */
+  .countdown-card{
+    background:var(--navy-soft);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:28px;
+    position:relative;
+  }
+  .countdown-card::before{
+    content:"";position:absolute;top:-14px;right:26px;
+    width:26px;height:26px;background:var(--gold);transform:rotate(45deg);border-radius:5px;
+  }
+  .countdown-label{font-size:0.86rem;color:var(--muted);margin-bottom:16px;}
+  .countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+  .countdown div{
+    background:var(--navy);border:1px solid var(--line);border-radius:12px;
+    text-align:center;padding:16px 4px;
+  }
+  .countdown .num{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:var(--cream);}
+  .countdown .unit{font-size:0.72rem;color:var(--muted);margin-top:4px;}
+  .countdown-note{margin-top:16px;font-size:0.84rem;color:var(--muted);}
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Section shell ---------- */
+  section{padding:88px 0;}
+  .section-head{max-width:640px;margin-bottom:44px;}
+  .section-tag{
+    display:flex;align-items:center;gap:8px;
+    color:var(--purple);font-weight:600;font-size:0.9rem;margin-bottom:10px;
+  }
+  .section-tag .diamond{background:var(--purple);}
+  h2.section-title{font-size:clamp(1.8rem,3.4vw,2.5rem);}
+  .section-sub{color:#556077;margin-top:12px;font-size:1.02rem;}
+
+  /* ---------- Sobre el evento ---------- */
+  .about{background:var(--cream);}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+  .about-copy p{color:#3B4557;margin:0 0 16px;font-size:1.02rem;}
+  .programs{display:flex;flex-direction:column;gap:0;border-top:1px solid #DEDACB;}
+  .programs li{
+    list-style:none;display:flex;justify-content:space-between;gap:16px;
+    padding:16px 0;border-bottom:1px solid #DEDACB;font-size:0.98rem;
+  }
+  .programs li span:first-child{font-weight:600;font-family:'Space Grotesk',sans-serif;}
+  .programs li span:last-child{color:#6B7488;text-align:right;}
+  @media (max-width:900px){.about-grid{grid-template-columns:1fr;gap:32px;}}
+
+  /* ---------- Galería ---------- */
+  .gallery{background:#EFEAE0;}
+  .gallery-block{margin-top:48px;}
+  .gallery-block:first-of-type{margin-top:0;}
+  .gallery-block h3{
+    font-size:1.2rem;display:flex;align-items:center;gap:10px;margin-bottom:18px;
+  }
+  .gallery-block h3 .diamond{background:var(--green);}
+  .g-grid{display:grid;gap:16px;}
+  .g-grid.cols-2{grid-template-columns:repeat(2,1fr);}
+  .g-grid.cols-3{grid-template-columns:repeat(3,1fr);}
+  .g-item{
+    position:relative;border-radius:14px;overflow:hidden;background:#000;
+    aspect-ratio:4/3;
+  }
+  .g-item.wide{aspect-ratio:16/10;}
+  .g-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+  .g-item:hover img{transform:scale(1.04);}
+  .g-item figcaption{
+    position:absolute;left:0;right:0;bottom:0;
+    padding:26px 14px 12px;
+    background:linear-gradient(to top, rgba(0,0,0,0.72), transparent);
+    color:#fff;font-size:0.82rem;margin:0;
+  }
+  @media (max-width:900px){
+    .g-grid.cols-3{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:560px){
+    .g-grid.cols-2, .g-grid.cols-3{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Videos ---------- */
+  .videos{background:var(--navy);color:var(--cream);}
+  .videos .section-sub{color:var(--muted);}
+  .videos .section-tag{color:var(--gold);}
+  .videos .section-tag .diamond{background:var(--gold);}
+  .v-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .v-card{
+    background:var(--navy-soft);border:1px solid var(--line);border-radius:16px;
+    overflow:hidden;display:flex;flex-direction:column;
+  }
+  .v-card .frame{aspect-ratio:9/16;background:#000;}
+  .v-card.landscape .frame{aspect-ratio:16/9;}
+  .v-card video{width:100%;height:100%;object-fit:cover;}
+  .v-card figcaption{padding:14px 16px 18px;font-size:0.92rem;color:var(--cream);}
+  @media (max-width:900px){.v-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:600px){.v-grid{grid-template-columns:1fr;}}
+
+  /* ---------- Ubicación ---------- */
+  .location{background:var(--cream);}
+  .loc-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:44px;align-items:stretch;}
+  .loc-card{
+    background:var(--navy);color:var(--cream);border-radius:18px;padding:32px;
+    display:flex;flex-direction:column;gap:18px;
+  }
+  .loc-row{display:flex;gap:14px;align-items:flex-start;}
+  .loc-row .diamond{background:var(--green);margin-top:6px;}
+  .loc-row h4{margin:0 0 4px;font-family:'Space Grotesk',sans-serif;font-size:1rem;}
+  .loc-row p{margin:0;color:var(--muted);font-size:0.94rem;}
+  .map-frame{border-radius:18px;overflow:hidden;border:1px solid #DEDACB;min-height:320px;}
+  .map-frame iframe{width:100%;height:100%;min-height:320px;border:0;display:block;}
+  @media (max-width:900px){.loc-grid{grid-template-columns:1fr;}}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--navy);color:var(--muted);padding:40px 0;border-top:1px solid var(--line);}
+  .foot-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:0.86rem;}
+  .foot-brand{display:flex;align-items:center;gap:10px;color:var(--cream);font-family:'Space Grotesk',sans-serif;font-weight:600;}
+  .foot-marks{display:flex;gap:4px;}
+  .foot-marks span{width:8px;height:8px;transform:rotate(45deg);border-radius:2px;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="brand">
+      <img src="WhatsApp_Image_2026-09-11_at_10_34_45_PM.jpeg" alt="Isotipo SENA">
+      ExpoArt 2026
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#evento">El evento</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill">SENA Regional Atlántico · Articulación con la media</span>
+      <h1>ExpoArt 2026<br><span class="accent">Sueños de Innovación</span></h1>
+      <p class="lede">Dos días para recorrer los proyectos, stands y talento de los aprendices del SENA Atlántico: innovación, tecnología y emprendimiento hechos por ellos mismos.</p>
+      <div class="info-chips">
+        <span>📅 28 y 29 de octubre</span>
+        <span>🕖 7:00 a. m. – 5:00 p. m.</span>
+        <span>📍 Combarranquilla, Sede Boston</span>
+      </div>
+      <div class="cta-row">
+        <a href="#ubicacion" class="btn btn-primary">Ver ubicación</a>
+        <a href="#galeria" class="btn btn-ghost">Explorar galería</a>
+      </div>
+    </div>
+
+    <div class="countdown-card">
+      <div class="countdown-label">Falta para que abran las puertas</div>
+      <div class="countdown" id="countdown">
+        <div><div class="num" id="cd-days">00</div><div class="unit">días</div></div>
+        <div><div class="num" id="cd-hours">00</div><div class="unit">horas</div></div>
+        <div><div class="num" id="cd-mins">00</div><div class="unit">minutos</div></div>
+        <div><div class="num" id="cd-secs">00</div><div class="unit">segundos</div></div>
+      </div>
+      <div class="countdown-note" id="cd-note">Miércoles 28 de octubre de 2026, 7:00 a. m. — Combarranquilla, Sede Boston.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SOBRE EL EVENTO ================= -->
+<section class="about" id="evento">
+  <div class="wrap about-grid">
+    <div>
+      <div class="section-tag"><span class="diamond"></span>Sobre el evento</div>
+      <h2 class="section-title">Lo que aprenden en el aula, expuesto a toda la ciudad</h2>
+      <div class="about-copy" style="margin-top:22px;">
+        <p>ExpoArt reúne cada año a los aprendices en articulación con la media del SENA Regional Atlántico, que abren sus stands para mostrar procesos, productos y proyectos trabajados durante su formación.</p>
+        <p>Durante los dos días de feria, cada programa técnico presenta su propia mirada de la innovación: desde preparaciones de cocina y asesoría comercial, hasta emprendimientos con enfoque natural y sostenible.</p>
+      </div>
+    </div>
+    <div>
+      <ul class="programs">
+        <li><span>Técnico en Cocina</span><span>Muestra gastronómica y repostería</span></li>
+        <li><span>Asesoría Comercial</span><span>Estrategias y atención al cliente</span></li>
+        <li><span>Emprendimientos naturales</span><span>Productos con enfoque sostenible</span></li>
+        <li><span>Contenidos y medios digitales</span><span>Cobertura y registro del evento</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALERÍA ================= -->
+<section class="gallery" id="galeria">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag"><span class="diamond" style="background:var(--green)"></span>Galería</div>
+      <h2 class="section-title">Momentos de ExpoArt</h2>
+      <p class="section-sub">Un repaso visual por la identidad del evento, la energía de los asistentes y los stands de los aprendices.</p>
+    </div>
+
+    <div class="gallery-block">
+      <h3><span class="diamond"></span>Identidad del evento</h3>
+      <div class="g-grid cols-2">
+        <figure class="g-item wide">
+          <img src="WhatsApp_Image_2026-09-11_at_10_34_43_PM.jpeg" alt="Banner oficial de ExpoArt 2026, Sueños de Innovación, evento de innovación, tecnología y emprendimiento del SENA" loading="lazy">
+          <figcaption>ExpoArt 2026 · Sueños de Innovación</figcaption>
+        </figure>
+        <figure class="g-item wide">
+          <img src="WhatsApp_Image_2026-09-11_at_10_34_45_PM.jpeg" alt="Isotipo institucional del SENA en azul y amarillo" loading="lazy">
+          <figcaption>Isotipo SENA</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="gallery-block">
+      <h3><span class="diamond"></span>Actividades</h3>
+      <div class="g-grid cols-2">
+        <figure class="g-item wide">
+          <img src="WhatsApp_Image_2026-09-11_at_10_34_59_PM.jpeg" alt="Graderías del coliseo llenas de estudiantes durante la jornada de ExpoArt" loading="lazy">
+          <figcaption>Asistentes reunidos en el coliseo</figcaption>
+        </figure>
+        <figure class="g-item wide">
+          <img src="WhatsApp_Image_2026-09-11_at_10_35_01_PM.jpeg" alt="Aprendiz del programa de Contenidos y Medios Digitales grabando a los estudiantes del stand de cocina" loading="lazy">
+          <figcaption>Equipo de Contenidos y Medios Digitales cubriendo el evento</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="gallery-block">
+      <h3><span class="diamond"></span>Stands y proyectos</h3>
+      <div class="g-grid cols-3">
+        <figure class="g-item">
+          <img src="WhatsApp_Image_2026-09-11_at_10_35_08_PM.jpeg" alt="Aprendices y visitantes en un stand de emprendimiento con productos naturales" loading="lazy">
+          <figcaption>Emprendimiento con enfoque natural</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="WhatsApp_Image_2026-09-11_at_10_35_37_PM__1_.jpeg" alt="Aprendices atendiendo el stand Hot Dog Delicius" loading="lazy">
+          <figcaption>Stand Hot Dog Delicius</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="WhatsApp_Image_2026-09-11_at_10_35_37_PM.jpeg" alt="Grupo de aprendices de Técnico en Cocina con su muestra de trufas y barras energéticas" loading="lazy">
+          <figcaption>Muestra de Técnico en Cocina</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VIDEOS ================= -->
+<section class="videos" id="videos">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag"><span class="diamond"></span>Videos</div>
+      <h2 class="section-title">Revive los anuncios de ExpoArt</h2>
+      <p class="section-sub">Los adelantos, invitaciones y agradecimientos que hemos compartido en redes con la comunidad SENA.</p>
+    </div>
+
+    <div class="v-grid">
+      <figure class="v-card landscape">
+        <div class="frame">
+          <video controls preload="metadata" poster="poster-anuncio-2026.jpg">
+            <source src="WhatsApp_Video_2026-09-12_at_6_59_13_PM.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption>Muy pronto: 28 y 29 de octubre</figcaption>
+      </figure>
+
+      <figure class="v-card">
+        <div class="frame">
+          <video controls preload="metadata" poster="poster-fecha.jpg">
+            <source src="WhatsApp_Video_2026-09-11_at_10_35_36_PM__1_.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption>Se revela la fecha</figcaption>
+      </figure>
+
+      <figure class="v-card">
+        <div class="frame">
+          <video controls preload="metadata" poster="poster-giacometo.jpg">
+            <source src="WhatsApp_Video_2026-09-11_at_10_35_36_PM.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption>Invitación: Salón de Giacometo</figcaption>
+      </figure>
+
+      <figure class="v-card">
+        <div class="frame">
+          <video controls preload="metadata" poster="poster-nosvemos.jpg">
+            <source src="WhatsApp_Video_2026-09-11_at_10_35_36_PM__2_.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption>Nos vemos allá</figcaption>
+      </figure>
+
+      <figure class="v-card">
+        <div class="frame">
+          <video controls preload="metadata" poster="poster-agradecimiento.jpg">
+            <source src="WhatsApp_Video_2026-09-11_at_10_35_18_PM.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption>Gracias, ExpoArt 24</figcaption>
+      </figure>
+
+      <figure class="v-card">
+        <div class="frame">
+          <video controls preload="metadata" poster="poster-escenario.jpg">
+            <source src="WhatsApp_Video_2026-09-08_at_11_34_28_AM.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption>Preparando el escenario</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= UBICACIÓN ================= -->
+<section class="location" id="ubicacion">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag"><span class="diamond" style="background:var(--green)"></span>Ubicación</div>
+      <h2 class="section-title">¿Dónde nos encontramos?</h2>
+    </div>
+
+    <div class="loc-grid">
+      <div class="loc-card">
+        <div class="loc-row">
+          <span class="diamond"></span>
+          <div>
+            <h4>Combarranquilla, Sede Boston</h4>
+            <p>Carrera 43 # 63B – 107, Barranquilla, Atlántico</p>
+          </div>
+        </div>
+        <div class="loc-row">
+          <span class="diamond" style="background:var(--gold)"></span>
+          <div>
+            <h4>Fecha y horario</h4>
+            <p>28 y 29 de octubre de 2026 · 7:00 a. m. a 5:00 p. m.</p>
+          </div>
+        </div>
+        <div class="loc-row">
+          <span class="diamond" style="background:var(--purple)"></span>
+          <div>
+            <h4>Organiza</h4>
+            <p>SENA Regional Atlántico</p>
+          </div>
+        </div>
+        <a class="btn btn-primary" style="margin-top:6px;align-self:flex-start"
+           href="https://www.google.com/maps/search/?api=1&query=Combarranquilla+Sede+Boston+Carrera+43+%2363B-107+Barranquilla"
+           target="_blank" rel="noopener">Abrir en Google Maps</a>
+      </div>
+
+      <div class="map-frame">
+        <iframe
+          src="https://www.google.com/maps?q=Combarranquilla+Sede+Boston+Carrera+43+%2363B-107+Barranquilla&output=embed"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa de ubicación de Combarranquilla, Sede Boston"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <div class="foot-brand">
+      <img src="WhatsApp_Image_2026-09-11_at_10_34_45_PM.jpeg" alt="Isotipo SENA" style="width:26px;height:26px;border-radius:6px;object-fit:cover;background:#fff;">
+      ExpoArt 2026 · Sueños de Innovación
+    </div>
+    <div>SENA Regional Atlántico — Articulación con la media</div>
+  </div>
+</footer>
+
+<script>
+  // Menú móvil
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // Countdown regresivo hacia el 28 de octubre de 2026, 7:00 a.m. (hora Colombia, UTC-5)
+  const targetDate = new Date('2026-10-28T07:00:00-05:00').getTime();
+
+  function updateCountdown(){
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+
+    const daysEl = document.getElementById('cd-days');
+    const hoursEl = document.getElementById('cd-hours');
+    const minsEl = document.getElementById('cd-mins');
+    const secsEl = document.getElementById('cd-secs');
+    const noteEl = document.getElementById('cd-note');
+
+    if (diff <= 0){
+      daysEl.textContent = '00';
+      hoursEl.textContent = '00';
+      minsEl.textContent = '00';
+      secsEl.textContent = '00';
+      noteEl.textContent = '¡ExpoArt 2026 ya está en marcha en Combarranquilla, Sede Boston!';
+      clearInterval(timer);
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+    daysEl.textContent = String(days).padStart(2, '0');
+    hoursEl.textContent = String(hours).padStart(2, '0');
+    minsEl.textContent = String(mins).padStart(2, '0');
+    secsEl.textContent = String(secs).padStart(2, '0');
+  }
+
+  updateCountdown();
+  const timer = setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
